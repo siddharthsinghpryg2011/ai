@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 4vh 3vw;
+}
+
+.back {
+  position: fixed;
+  inset: 0;
+  background: url(ai.jpg) center/cover no-repeat;
+  filter: brightness(0.6);
+  z-index: -1;
+}
+
+h1 {
+  color: blanchedalmond;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 5rem);
+  margin-bottom: 4vh;
+}
+
+/* cards */
+.ab1,
+.ab2,
+.ab3 {
+  width: min(1100px, 95%);
+  margin: 4vh auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: clamp(20px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+}
+
+.p1 {
+  max-width: 700px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* audio buttons */
+.audio-controls {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.play1,
+.play2 {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.play1 { background: brown; }
+.play2 { background: rgb(42,165,138); }
+
+.play1:hover,
+.play2:hover {
+  transform: scale(1.08);
+  transition: 0.2s;
+}
+
+audio { display: none; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .audio-controls { gap: 20px; }
+
+  .play1,
+  .play2 {
+    height: 70px;
+    width: 70px;
+    font-size: 28px;
+  }
+}
