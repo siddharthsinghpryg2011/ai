@@ -79,7 +79,7 @@ audio { display: none; }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 600;
 }
 
@@ -93,4 +93,5 @@ a {
     width: 70px;
     font-size: 28px;
   }
+
 }
